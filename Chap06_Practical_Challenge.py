@@ -56,3 +56,31 @@ times tables between 1 and 12? (no  need to ask user for input)
 for i in range(1,13):
     for j in range (1,13):
         print(i, "x", j , "=", i*j)
+
+"""
+Question 5
+Ask the user to input a sequence of numbers. Then calculate the mean
+and print the result
+"""
+
+num_sum =0
+for i in range (1,6):
+    print("The", i, "of", 5)
+    num = int(input("Give me a number: >>>>> "))
+    num_sum += num
+print("The result")
+print("Sum", num_sum)
+print("Mean", num_sum / 5)
+
+'''
+Question 6
+Write code that will calculate 15 factorial. (factorial is product of
+positive ints up to a given number. e.g 5 factorial is 5x4x3x2x1)
+'''
+num = int(input("Give me a number to calculate his factorial : "))
+print ("The factorail of the given number is:")
+factorial = 1
+while num > 0:
+    factorial = factorial * num
+    num -= 1
+print(factorial)
