@@ -46,3 +46,13 @@ if number <= 12 and number >= 1:
         
 else:
     print('Not the right number ')
+
+"""
+Question 4
+Can you amend the solution to question 3 so that it just prints out all
+times tables between 1 and 12? (no  need to ask user for input)
+"""
+
+for i in range(1,13):
+    for j in range (1,13):
+        print(i, "x", j , "=", i*j)
