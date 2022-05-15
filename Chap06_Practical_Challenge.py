@@ -84,3 +84,68 @@ while num > 0:
     factorial = factorial * num
     num -= 1
 print(factorial)
+
+'''
+Question 7
+Write code to calculate Fibonacci numbers. Create list containing
+first 20 Fibonacci numbers, (Fib  numbers made by sum of preceeding
+two. Series starts 0 1 1 2 3 5 8 13 ....)
+'''
+fib_list = [0,1]
+lenght = 20
+for i in range(1,9999):
+    if len(fib_list) <= lenght:
+        fib_list.append(fib_list[i] + fib_list[i-1])
+    else:
+        break
+    #print(len(fib_list))
+print(fib_list)
+
+
+'''
+Question 8
+The previous question was the first to contain comments. Go back
+through the other questions in this file and add comments to the
+solutions.
+'''
+
+'''
+Question 9
+
+     *****
+     *
+     ****
+     *
+     *
+     *
+Can you draw this using python? (comment the solution code)
+'''
+
+for i in range(1,7):
+    for j in range(1,6):
+        if i ==1 and j < 5:
+            print("*", end=" ")
+        elif i == 2 and j < 3:
+            print("*")
+        elif i==3 and j < 4:
+            print('*', end=" ")
+        elif i > 4 and j < 3:
+            print("*") 
+
+'''
+Question 10
+Write some code that will determine all odd and even numbers
+between 1 and 100. Put the odds in a list named odd and the evens
+in a list named even.
+'''
+
+odd = []
+even = []
+
+for i in range (1,101):
+    if i % 2 == 0 :
+        odd.append(i)
+    else:
+        even.append(i)
+print(odd)
+print(even)
