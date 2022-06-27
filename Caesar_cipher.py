@@ -38,3 +38,31 @@ def encrypte (text, n = 0):
     return textCode
 
 encrypte(message,n=-5)
+
+
+
+"The solution of 365DS"
+import string
+alphabet_string = string.ascii_lowercase
+
+def shift_amount(amount):
+    return amount%26
+
+def encryte_message (texte, shift):
+    texte = texte.lower()
+    output = ""
+    for char in texte:
+        if char not in alphabet_string:
+            output = output + char
+        else:
+            alphabet_idex = alphabet_string.find(char)
+            output = output + alphabet_string[shift_amount(alphabet_idex + shift)]
+    return output
+
+message = "The cat sat on the mat"
+
+message_encrypted = encryte_message(message, 11)
+print(message_encrypted)
+
+message_decrypted = encryte_message(message_encrypted, -11)
+print(message_decrypted)
